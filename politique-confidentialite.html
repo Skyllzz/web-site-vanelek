@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Politique de confidentialité et RGPD du site Vanélek — Innovative Energy Solutions.">
+    <meta name="robots" content="noindex, follow">
+    <title>Politique de Confidentialité — Vanélek</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --couleur-fond:              #05101f;
+            --couleur-fond-secondaire:   #0a1e3a;
+            --couleur-fond-carte:        #0d2040;
+            --couleur-accent-bleu:       #3498db;
+            --couleur-accent-orange:     #e67e22;
+            --couleur-texte:             #e8f4fc;
+            --couleur-texte-secondaire:  #8bb8d4;
+            --couleur-bordure:           rgba(52, 152, 219, 0.25);
+            --rayon-bordure:             12px;
+            --transition:                0.3s ease;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--couleur-fond);
+            color: var(--couleur-texte);
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex; flex-direction: column;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            position: sticky; top: 0; z-index: 100;
+            background-color: rgba(5, 16, 31, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--couleur-bordure);
+            padding: 0 2rem;
+        }
+        .navbar__inner {
+            max-width: 1100px; margin: 0 auto;
+            display: flex; align-items: center;
+            justify-content: space-between; height: 64px;
+        }
+        .navbar__brand {
+            display: flex; align-items: center; gap: 0.6rem;
+            font-size: 1.3rem; font-weight: 700;
+            color: var(--couleur-accent-bleu);
+            text-decoration: none; letter-spacing: 0.05em;
+        }
+        .navbar__brand img { height: 34px; width: auto; object-fit: contain; filter: drop-shadow(0 0 6px rgba(52,152,219,0.5)); }
+        .navbar__brand span { display: none; }
+        .navbar__retour {
+            font-size: 0.9rem; color: var(--couleur-texte-secondaire);
+            text-decoration: none; display: flex; align-items: center; gap: 0.4rem;
+            transition: color var(--transition);
+        }
+        .navbar__retour:hover { color: var(--couleur-accent-bleu); }
+
+        /* CONTENU */
+        main { flex: 1; padding: 4rem 2rem 6rem; }
+        .page-wrapper { max-width: 860px; margin: 0 auto; }
+
+        .page-header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--couleur-bordure);
+        }
+        .page-label {
+            display: inline-block;
+            font-size: 0.75rem; font-weight: 700;
+            letter-spacing: 0.2em; text-transform: uppercase;
+            color: var(--couleur-accent-orange); margin-bottom: 0.75rem;
+        }
+        .page-titre {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 800; line-height: 1.2;
+            background: linear-gradient(135deg, var(--couleur-texte) 40%, var(--couleur-accent-bleu));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .page-date { margin-top: 0.75rem; font-size: 0.85rem; color: var(--couleur-texte-secondaire); font-style: italic; }
+
+        .legal-section {
+            background-color: var(--couleur-fond-carte);
+            border: 1px solid var(--couleur-bordure);
+            border-radius: var(--rayon-bordure);
+            padding: 2rem 2.5rem;
+            margin-bottom: 1.5rem;
+            transition: border-color var(--transition);
+        }
+        .legal-section:hover { border-color: rgba(52, 152, 219, 0.45); }
+
+        .legal-section h2 {
+            font-size: 1.15rem; font-weight: 700;
+            color: var(--couleur-accent-bleu);
+            margin-bottom: 1.2rem;
+            display: flex; align-items: center; gap: 0.6rem;
+        }
+        .legal-section h2::before {
+            content: ''; display: inline-block;
+            width: 4px; height: 1.15rem;
+            background: linear-gradient(to bottom, var(--couleur-accent-bleu), var(--couleur-accent-orange));
+            border-radius: 2px; flex-shrink: 0;
+        }
+
+        .legal-section p { margin-bottom: 0.9rem; font-size: 0.95rem; color: var(--couleur-texte-secondaire); }
+        .legal-section p:last-child { margin-bottom: 0; }
+
+        /* Encart information */
+        .info-box {
+            background: rgba(52, 152, 219, 0.07);
+            border: 1px solid rgba(52, 152, 219, 0.2);
+            border-left: 4px solid var(--couleur-accent-bleu);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            color: var(--couleur-texte-secondaire);
+        }
+
+        a { color: var(--couleur-accent-bleu); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* FOOTER */
+        .footer {
+            background-color: rgba(5, 16, 31, 0.98);
+            border-top: 1px solid var(--couleur-bordure);
+            padding: 1.5rem 2rem;
+            text-align: center;
+        }
+        .footer p { font-size: 0.8rem; color: rgba(139, 184, 212, 0.55); }
+        .footer__liens { display: flex; justify-content: center; gap: 1.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
+        .footer__liens a { font-size: 0.8rem; color: rgba(139, 184, 212, 0.55); text-decoration: none; transition: color var(--transition); }
+        .footer__liens a:hover { color: var(--couleur-accent-bleu); }
+
+        @media (max-width: 640px) { .legal-section { padding: 1.5rem; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar" aria-label="Navigation">
+            <div class="navbar__inner">
+                <a href="index.html" class="navbar__brand" aria-label="Vanélek - Retour à l'accueil">
+                    <img src="logo.png" alt="Logo Vanélek"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                    <span>Vanélek.</span>
+                </a>
+                <a href="index.html" class="navbar__retour">← Retour au site</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-wrapper">
+
+            <div class="page-header">
+                <span class="page-label">RGPD &amp; Vie privée</span>
+                <h1 class="page-titre">Politique de Confidentialité</h1>
+                <p class="page-date">Dernière mise à jour : mars 2025</p>
+            </div>
+
+            <!-- 1. Traitement des données -->
+            <div class="legal-section">
+                <h2>1. Traitement des données personnelles</h2>
+                <p>
+                    Ce site web est un projet académique statique qui ne collecte directement aucune donnée personnelle via des formulaires.
+                    Toutefois, le site reposant sur l'infrastructure de <strong style="color:var(--couleur-texte)">GitHub Pages</strong>,
+                    la société GitHub, Inc. collecte automatiquement des informations techniques de connexion lors de votre visite,
+                    incluant votre adresse IP, votre type de navigateur et l'heure de votre requête.
+                </p>
+                <div class="info-box">
+                    <strong>Base légale :</strong> L'intérêt légitime — ces logs étant nécessaires pour garantir la sécurité,
+                    l'intégrité et le fonctionnement du réseau.
+                </div>
+            </div>
+
+            <!-- 2. Cookies -->
+            <div class="legal-section">
+                <h2>2. Cookies et traceurs</h2>
+                <p>
+                    Ce site n'utilise aucun cookie de suivi publicitaire ou d'analyse d'audience.
+                </p>
+                <p>
+                    L'hébergeur GitHub peut être amené à déposer des cookies strictement nécessaires au fonctionnement
+                    technique et à la sécurité de la plateforme (par exemple, pour le routage ou la prévention des attaques).
+                    Conformément à la réglementation de la <strong style="color:var(--couleur-texte)">CNIL</strong>,
+                    ces cookies purement techniques sont exemptés de consentement préalable.
+                </p>
+            </div>
+
+            <!-- 3. Transfert de données -->
+            <div class="legal-section">
+                <h2>3. Transfert de données</h2>
+                <p>
+                    Les données techniques de connexion (logs) collectées par l'hébergeur sont susceptibles d'être
+                    transférées et traitées sur des serveurs situés aux <strong style="color:var(--couleur-texte)">États-Unis</strong>
+                    par GitHub, Inc.
+                </p>
+                <p>
+                    Pour en savoir plus sur la politique de confidentialité de GitHub, consultez :
+                    <a href="https://docs.github.com/fr/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">
+                        GitHub Privacy Statement
+                    </a>.
+                </p>
+            </div>
+
+            <!-- 4. Exercice des droits -->
+            <div class="legal-section">
+                <h2>4. Exercice de vos droits</h2>
+                <p>
+                    Conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679) et à la loi
+                    Informatique et Libertés, vous disposez d'un droit d'accès, de rectification et d'opposition concernant
+                    vos données personnelles.
+                </p>
+                <p>
+                    Pour toute question relative à la protection de vos données, vous pouvez contacter l'éditeur du site
+                    à l'adresse suivante : <a href="mailto:vanelek.info@gmail.com">vanelek.info@gmail.com</a>.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Vanélek — Projet étudiant · <em>Innovative Energy Solutions</em></p>
+        <div class="footer__liens">
+            <a href="mentions-legales.html">Mentions Légales</a>
+            <a href="cgu.html">CGU</a>
+            <a href="politique-confidentialite.html">RGPD / Confidentialité</a>
+        </div>
+    </footer>
+
+</body>
+</html>

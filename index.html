@@ -77,6 +77,9 @@
 
         /* Logo / nom dans la navbar */
         .navbar__brand {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
             font-size: 1.4rem;
             font-weight: 700;
             color: var(--couleur-accent-bleu);
@@ -85,8 +88,21 @@
             transition: color var(--transition);
         }
 
-        .navbar__brand span {
-            color: var(--couleur-accent-orange);
+        .navbar__brand__logo {
+            height: 36px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            filter: drop-shadow(0 0 6px rgba(52, 152, 219, 0.5));
+            transition: filter var(--transition);
+        }
+
+        .navbar__brand:hover .navbar__brand__logo {
+            filter: drop-shadow(0 0 10px rgba(52, 152, 219, 0.85));
+        }
+
+        .navbar__brand__text {
+            display: none; /* On cache le texte car le logo inclut déjà "Vanelek" */
         }
 
         .navbar__brand:hover {
@@ -204,39 +220,40 @@
         }
 
         .hero__logo {
-            width: 160px;
-            height: 160px;
+            width: clamp(260px, 40vw, 420px);
+            height: auto;
             object-fit: contain;
-            border-radius: 50%;
-            border: 3px solid var(--couleur-accent-bleu);
+            border-radius: 16px;
             box-shadow:
-                0 0 30px rgba(52, 152, 219, 0.4),
-                0 0 80px rgba(52, 152, 219, 0.15);
-            background-color: var(--couleur-fond-secondaire);
-            transition: transform var(--transition), box-shadow var(--transition);
+                0 0 40px rgba(52, 152, 219, 0.35),
+                0 0 100px rgba(52, 152, 219, 0.12);
+            transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
+            filter: drop-shadow(0 4px 24px rgba(52, 152, 219, 0.3));
         }
 
         .hero__logo:hover {
-            transform: scale(1.05);
+            transform: scale(1.04) translateY(-4px);
             box-shadow:
-                0 0 40px rgba(52, 152, 219, 0.6),
-                0 0 100px rgba(52, 152, 219, 0.25);
+                0 0 60px rgba(52, 152, 219, 0.55),
+                0 0 140px rgba(52, 152, 219, 0.22);
+            filter: drop-shadow(0 8px 36px rgba(52, 152, 219, 0.5));
         }
 
-        /* Badge "fallback" si logo.jpg est manquant — masqué par défaut via l'attribut style HTML */
+        /* Badge "fallback" si logo.png est manquant — masqué par défaut via l'attribut style HTML */
         .hero__logo-fallback {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            border: 3px solid var(--couleur-accent-bleu);
+            width: 280px;
+            height: 100px;
+            border-radius: 12px;
+            border: 2px solid var(--couleur-accent-bleu);
             background: linear-gradient(135deg, var(--couleur-fond-secondaire), var(--couleur-fond-carte));
             box-shadow: 0 0 30px rgba(52, 152, 219, 0.4);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: 700;
             color: var(--couleur-accent-bleu);
+            letter-spacing: 0.05em;
         }
 
         .hero__titre {
@@ -728,8 +745,11 @@
 
             /* Héro */
             .hero__logo {
-                width: 120px;
-                height: 120px;
+                width: clamp(200px, 70vw, 300px);
+            }
+
+            .navbar__brand__text {
+                display: none;
             }
 
             /* Grilles */
@@ -811,8 +831,12 @@
     <header>
         <nav class="navbar" aria-label="Navigation principale">
             <div class="navbar__inner">
-                <!-- Nom / marque -->
-                <a href="#accueil" class="navbar__brand">Vanélek<span>.</span></a>
+                <!-- Logo / marque -->
+                <a href="#accueil" class="navbar__brand" aria-label="Vanélek - Retour à l'accueil">
+                    <img src="logo.png" alt="Logo Vanélek" class="navbar__brand__logo"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                    <span class="navbar__brand__text">Vanélek<span>.</span></span>
+                </a>
 
                 <!-- Liens de navigation (bureau) -->
                 <ul class="navbar__links" id="menu-nav">
@@ -847,13 +871,13 @@
                 <!-- Logo du projet -->
                 <div class="hero__logo-wrapper">
                     <img
-                        src="logo.jpg"
-                        alt="Logo Vanélek"
+                        src="logo.png"
+                        alt="Logo Vanélek — Innovative Energy Solutions"
                         class="hero__logo"
                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                     >
-                    <!-- Affichage de secours si logo.jpg est absent (masqué par défaut) -->
-                    <div class="hero__logo-fallback" style="display:none" aria-hidden="true">V</div>
+                    <!-- Affichage de secours si logo.png est absent (masqué par défaut) -->
+                    <div class="hero__logo-fallback" style="display:none" aria-hidden="true">Vanélek</div>
                 </div>
 
                 <!-- Titre et accroche -->

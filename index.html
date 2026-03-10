@@ -495,8 +495,8 @@
 
         /* Avatar / initiales du membre */
         .carte-membre__avatar {
-            width: 72px;
-            height: 72px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--couleur-accent-bleu), #1a6fa0);
             display: flex;
@@ -507,6 +507,7 @@
             color: #fff;
             margin: 0 auto 1.2rem;
             box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+            object-fit: cover;
         }
 
         /* Numéro du membre (décoratif) */
@@ -1030,7 +1031,8 @@
                     <!-- Membre 1 : Noé Périllat -->
                     <article class="carte-membre">
                         <span class="carte-membre__numero">01</span>
-                        <div class="carte-membre__avatar" aria-hidden="true">NP</div>
+                        <img class="carte-membre__avatar" src="photo/noe.jpg" alt="Noé" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="carte-membre__avatar" aria-hidden="true" style="display:none;">NP</div>
                         <p class="carte-membre__prenom">Noé</p>
                         <h3 class="carte-membre__nom">Périllat</h3>
                         <span class="carte-membre__tag">Chef de projet &amp; Électronique</span>
@@ -1039,7 +1041,8 @@
                     <!-- Membre 2 : Emre Tarakci -->
                     <article class="carte-membre">
                         <span class="carte-membre__numero">02</span>
-                        <div class="carte-membre__avatar" aria-hidden="true">ET</div>
+                        <img class="carte-membre__avatar" src="photo/emre.jpg" alt="Emre" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="carte-membre__avatar" aria-hidden="true" style="display:none;">ET</div>
                         <p class="carte-membre__prenom">Emre</p>
                         <h3 class="carte-membre__nom">Tarakci</h3>
                         <span class="carte-membre__tag">Happiness Manager</span>
@@ -1048,7 +1051,8 @@
                     <!-- Membre 3 : Paul Rodo -->
                     <article class="carte-membre">
                         <span class="carte-membre__numero">03</span>
-                        <div class="carte-membre__avatar" aria-hidden="true">PR</div>
+                        <img class="carte-membre__avatar" src="photo/paul.jpg" alt="Paul" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="carte-membre__avatar" aria-hidden="true" style="display:none;">PR</div>
                         <p class="carte-membre__prenom">Paul</p>
                         <h3 class="carte-membre__nom">Rodo</h3>
                         <span class="carte-membre__tag">Équipe Vanélek</span>
@@ -1057,7 +1061,8 @@
                     <!-- Membre 4 : Sami Rouabah -->
                     <article class="carte-membre">
                         <span class="carte-membre__numero">04</span>
-                        <div class="carte-membre__avatar" aria-hidden="true">SR</div>
+                        <img class="carte-membre__avatar" src="photo/sami.jpg" alt="Sami" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="carte-membre__avatar" aria-hidden="true" style="display:none;">SR</div>
                         <p class="carte-membre__prenom">Sami</p>
                         <h3 class="carte-membre__nom">Rouabah</h3>
                         <span class="carte-membre__tag">Équipe Vanélek</span>
@@ -1066,7 +1071,8 @@
                     <!-- Membre 5 : Clément Mandelli -->
                     <article class="carte-membre">
                         <span class="carte-membre__numero">05</span>
-                        <div class="carte-membre__avatar" aria-hidden="true">CM</div>
+                        <img class="carte-membre__avatar" src="photo/clement.jpg" alt="Clément" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="carte-membre__avatar" aria-hidden="true" style="display:none;">CM</div>
                         <p class="carte-membre__prenom">Clément</p>
                         <h3 class="carte-membre__nom">Mandelli</h3>
                         <span class="carte-membre__tag">Équipe Vanélek</span>

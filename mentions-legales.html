@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,30 @@
     <meta name="robots" content="noindex, follow">
     <title>Mentions Légales — Vanélek</title>
     <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-        :root {
-            --couleur-fond:              #05101f;
-            --couleur-fond-secondaire:   #0a1e3a;
-            --couleur-fond-carte:        #0d2040;
-            --couleur-accent-bleu:       #3498db;
-            --couleur-accent-orange:     #e67e22;
-            --couleur-texte:             #e8f4fc;
-            --couleur-texte-secondaire:  #8bb8d4;
-            --couleur-bordure:           rgba(52, 152, 219, 0.25);
-            --rayon-bordure:             12px;
-            --transition:                0.3s ease;
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
-        html { scroll-behavior: smooth; }
+        :root {
+            --couleur-fond: #05101f;
+            --couleur-fond-secondaire: #0a1e3a;
+            --couleur-fond-carte: #0d2040;
+            --couleur-accent-bleu: #3498db;
+            --couleur-accent-orange: #e67e22;
+            --couleur-texte: #e8f4fc;
+            --couleur-texte-secondaire: #8bb8d4;
+            --couleur-bordure: rgba(52, 152, 219, 0.25);
+            --rayon-bordure: 12px;
+            --transition: 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -36,36 +45,70 @@
 
         /* NAVBAR */
         .navbar {
-            position: sticky; top: 0; z-index: 100;
+            position: sticky;
+            top: 0;
+            z-index: 100;
             background-color: rgba(5, 16, 31, 0.92);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--couleur-bordure);
             padding: 0 2rem;
         }
+
         .navbar__inner {
-            max-width: 1100px; margin: 0 auto;
-            display: flex; align-items: center;
-            justify-content: space-between; height: 64px;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
         }
+
         .navbar__brand {
-            display: flex; align-items: center; gap: 0.6rem;
-            font-size: 1.3rem; font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1.3rem;
+            font-weight: 700;
             color: var(--couleur-accent-bleu);
-            text-decoration: none; letter-spacing: 0.05em;
+            text-decoration: none;
+            letter-spacing: 0.05em;
         }
-        .navbar__brand img { height: 34px; width: auto; object-fit: contain; filter: drop-shadow(0 0 6px rgba(52,152,219,0.5)); }
-        .navbar__brand span { display: none; }
+
+        .navbar__brand img {
+            height: 34px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 6px rgba(52, 152, 219, 0.5));
+        }
+
+        .navbar__brand span {
+            display: none;
+        }
+
         .navbar__retour {
-            font-size: 0.9rem; color: var(--couleur-texte-secondaire);
-            text-decoration: none; display: flex; align-items: center; gap: 0.4rem;
+            font-size: 0.9rem;
+            color: var(--couleur-texte-secondaire);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
             transition: color var(--transition);
         }
-        .navbar__retour:hover { color: var(--couleur-accent-bleu); }
+
+        .navbar__retour:hover {
+            color: var(--couleur-accent-bleu);
+        }
 
         /* CONTENU */
-        main { flex: 1; padding: 4rem 2rem 6rem; }
+        main {
+            flex: 1;
+            padding: 4rem 2rem 6rem;
+        }
 
-        .page-wrapper { max-width: 860px; margin: 0 auto; }
+        .page-wrapper {
+            max-width: 860px;
+            margin: 0 auto;
+        }
 
         /* En-tête de la page */
         .page-header {
@@ -73,21 +116,31 @@
             padding-bottom: 2rem;
             border-bottom: 1px solid var(--couleur-bordure);
         }
+
         .page-label {
             display: inline-block;
-            font-size: 0.75rem; font-weight: 700;
-            letter-spacing: 0.2em; text-transform: uppercase;
-            color: var(--couleur-accent-orange); margin-bottom: 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--couleur-accent-orange);
+            margin-bottom: 0.75rem;
         }
+
         .page-titre {
             font-size: clamp(1.8rem, 4vw, 2.6rem);
-            font-weight: 800; line-height: 1.2;
+            font-weight: 800;
+            line-height: 1.2;
             background: linear-gradient(135deg, var(--couleur-texte) 40%, var(--couleur-accent-bleu));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
+
         .page-date {
             margin-top: 0.75rem;
-            font-size: 0.85rem; color: var(--couleur-texte-secondaire);
+            font-size: 0.85rem;
+            color: var(--couleur-texte-secondaire);
             font-style: italic;
         }
 
@@ -100,26 +153,44 @@
             margin-bottom: 1.5rem;
             transition: border-color var(--transition);
         }
-        .legal-section:hover { border-color: rgba(52, 152, 219, 0.45); }
+
+        .legal-section:hover {
+            border-color: rgba(52, 152, 219, 0.45);
+        }
 
         .legal-section h2 {
-            font-size: 1.15rem; font-weight: 700;
+            font-size: 1.15rem;
+            font-weight: 700;
             color: var(--couleur-accent-bleu);
             margin-bottom: 1.2rem;
-            display: flex; align-items: center; gap: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
         }
+
         .legal-section h2::before {
             content: '';
-            display: inline-block; width: 4px; height: 1.15rem;
+            display: inline-block;
+            width: 4px;
+            height: 1.15rem;
             background: linear-gradient(to bottom, var(--couleur-accent-bleu), var(--couleur-accent-orange));
-            border-radius: 2px; flex-shrink: 0;
+            border-radius: 2px;
+            flex-shrink: 0;
         }
 
-        .legal-section p { margin-bottom: 0.8rem; font-size: 0.95rem; color: var(--couleur-texte-secondaire); }
-        .legal-section p:last-child { margin-bottom: 0; }
+        .legal-section p {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--couleur-texte-secondaire);
+        }
+
+        .legal-section p:last-child {
+            margin-bottom: 0;
+        }
 
         .legal-field {
-            display: flex; flex-wrap: wrap;
+            display: flex;
+            flex-wrap: wrap;
             gap: 0.3rem 1rem;
             padding: 0.6rem 1rem;
             background: rgba(52, 152, 219, 0.05);
@@ -127,11 +198,25 @@
             margin-bottom: 0.6rem;
             font-size: 0.9rem;
         }
-        .legal-field strong { color: var(--couleur-texte); min-width: 220px; }
-        .legal-field span { color: var(--couleur-texte-secondaire); font-style: italic; }
 
-        a { color: var(--couleur-accent-bleu); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        .legal-field strong {
+            color: var(--couleur-texte);
+            min-width: 220px;
+        }
+
+        .legal-field span {
+            color: var(--couleur-texte-secondaire);
+            font-style: italic;
+        }
+
+        a {
+            color: var(--couleur-accent-bleu);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
 
         /* FOOTER */
         .footer {
@@ -140,18 +225,48 @@
             padding: 1.5rem 2rem;
             text-align: center;
         }
-        .footer p { font-size: 0.8rem; color: rgba(139, 184, 212, 0.55); }
-        .footer__liens { display: flex; justify-content: center; gap: 1.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
-        .footer__liens a { font-size: 0.8rem; color: rgba(139, 184, 212, 0.55); text-decoration: none; transition: color var(--transition); }
-        .footer__liens a:hover { color: var(--couleur-accent-bleu); }
+
+        .footer p {
+            font-size: 0.8rem;
+            color: rgba(139, 184, 212, 0.55);
+        }
+
+        .footer__liens {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .footer__liens a {
+            font-size: 0.8rem;
+            color: rgba(139, 184, 212, 0.55);
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        .footer__liens a:hover {
+            color: var(--couleur-accent-bleu);
+        }
 
         @media (max-width: 640px) {
-            .legal-section { padding: 1.5rem; }
-            .legal-field { flex-direction: column; gap: 0.15rem; }
-            .legal-field strong { min-width: unset; }
+            .legal-section {
+                padding: 1.5rem;
+            }
+
+            .legal-field {
+                flex-direction: column;
+                gap: 0.15rem;
+            }
+
+            .legal-field strong {
+                min-width: unset;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -159,7 +274,7 @@
             <div class="navbar__inner">
                 <a href="index.html" class="navbar__brand" aria-label="Vanélek - Retour à l'accueil">
                     <img src="logo.png" alt="Logo Vanélek"
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
                     <span>Vanélek.</span>
                 </a>
                 <a href="index.html" class="navbar__retour">← Retour au site</a>
@@ -186,10 +301,6 @@
                     <span>Clément Mandelli</span>
                 </div>
                 <div class="legal-field">
-                    <strong>Adresse de domicile</strong>
-                    <span>[Votre adresse postale complète — peut être supprimée si vous choisissez l'anonymat et l'avez fournie à GitHub]</span>
-                </div>
-                <div class="legal-field">
                     <strong>Adresse e-mail de contact</strong>
                     <span>vanelek.info@gmail.com</span>
                 </div>
@@ -202,7 +313,8 @@
             <!-- 2. Hébergeur -->
             <div class="legal-section">
                 <h2>2. Hébergeur</h2>
-                <p>Ce site est hébergé techniquement par la société <strong style="color:var(--couleur-texte)">GitHub, Inc.</strong></p>
+                <p>Ce site est hébergé techniquement par la société <strong style="color:var(--couleur-texte)">GitHub,
+                        Inc.</strong></p>
 
                 <div class="legal-field">
                     <strong>Siège social</strong>
@@ -231,4 +343,5 @@
     </footer>
 
 </body>
+
 </html>

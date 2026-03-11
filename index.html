@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <!-- ================================================
          Vanélek - Site Vitrine
@@ -9,7 +10,8 @@
          ================================================ -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vanélek - Innovative Energy Solutions. Projet étudiant proposant des solutions énergétiques innovantes.">
+    <meta name="description"
+        content="Vanélek - Innovative Energy Solutions. Projet étudiant proposant des solutions énergétiques innovantes.">
     <meta name="author" content="Clément Mandelli, Noé Périllat, Sami Rouabah, Emre Tarakci, Paul Rodo">
     <title>Vanélek — Innovative Energy Solutions</title>
 
@@ -17,7 +19,9 @@
         /* ================================================
            RÉINITIALISATION & BASE
            ================================================ */
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -25,17 +29,25 @@
 
         /* Variables CSS pour la charte graphique */
         :root {
-            --couleur-fond:          #05101f;   /* Bleu nuit très sombre */
-            --couleur-fond-secondaire: #0a1e3a;  /* Bleu nuit légèrement plus clair */
-            --couleur-fond-carte:    #0d2040;   /* Fond des cartes */
-            --couleur-accent-bleu:   #3498db;   /* Bleu électrique */
-            --couleur-accent-orange: #e67e22;   /* Orange */
-            --couleur-texte:         #e8f4fc;   /* Texte principal clair */
-            --couleur-texte-secondaire: #8bb8d4; /* Texte secondaire */
-            --couleur-bordure:       rgba(52, 152, 219, 0.25); /* Bordure subtile */
-            --font-principale:       'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-            --rayon-bordure:         12px;
-            --transition:            0.3s ease;
+            --couleur-fond: #05101f;
+            /* Bleu nuit très sombre */
+            --couleur-fond-secondaire: #0a1e3a;
+            /* Bleu nuit légèrement plus clair */
+            --couleur-fond-carte: #0d2040;
+            /* Fond des cartes */
+            --couleur-accent-bleu: #3498db;
+            /* Bleu électrique */
+            --couleur-accent-orange: #e67e22;
+            /* Orange */
+            --couleur-texte: #e8f4fc;
+            /* Texte principal clair */
+            --couleur-texte-secondaire: #8bb8d4;
+            /* Texte secondaire */
+            --couleur-bordure: rgba(52, 152, 219, 0.25);
+            /* Bordure subtile */
+            --font-principale: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            --rayon-bordure: 12px;
+            --transition: 0.3s ease;
         }
 
         html {
@@ -102,7 +114,8 @@
         }
 
         .navbar__brand__text {
-            display: none; /* On cache le texte car le logo inclut déjà "Vanelek" */
+            display: none;
+            /* On cache le texte car le logo inclut déjà "Vanelek" */
         }
 
         .navbar__brand:hover {
@@ -391,6 +404,10 @@
            ================================================ */
         .section-projet {
             background-color: var(--couleur-fond-secondaire);
+            background-image: linear-gradient(rgba(10, 30, 58, 0.85), rgba(10, 30, 58, 0.85)), url('photo/photoproto.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         /* Grille de fonctionnalités / valeurs */
@@ -714,6 +731,7 @@
            RESPONSIVE — MOBILE (≤ 768px)
            ================================================ */
         @media (max-width: 768px) {
+
             /* Navigation */
             .navbar__burger {
                 display: flex;
@@ -804,6 +822,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -816,11 +835,30 @@
         }
 
         /* Délais d'animation en cascade pour les cartes */
-        .carte-fonctionnalite:nth-child(1), .carte-membre:nth-child(1) { animation-delay: 0.05s; }
-        .carte-fonctionnalite:nth-child(2), .carte-membre:nth-child(2) { animation-delay: 0.10s; }
-        .carte-fonctionnalite:nth-child(3), .carte-membre:nth-child(3) { animation-delay: 0.15s; }
-        .carte-fonctionnalite:nth-child(4), .carte-membre:nth-child(4) { animation-delay: 0.20s; }
-        .carte-fonctionnalite:nth-child(5), .carte-membre:nth-child(5) { animation-delay: 0.25s; }
+        .carte-fonctionnalite:nth-child(1),
+        .carte-membre:nth-child(1) {
+            animation-delay: 0.05s;
+        }
+
+        .carte-fonctionnalite:nth-child(2),
+        .carte-membre:nth-child(2) {
+            animation-delay: 0.10s;
+        }
+
+        .carte-fonctionnalite:nth-child(3),
+        .carte-membre:nth-child(3) {
+            animation-delay: 0.15s;
+        }
+
+        .carte-fonctionnalite:nth-child(4),
+        .carte-membre:nth-child(4) {
+            animation-delay: 0.20s;
+        }
+
+        .carte-fonctionnalite:nth-child(5),
+        .carte-membre:nth-child(5) {
+            animation-delay: 0.25s;
+        }
     </style>
 </head>
 
@@ -835,7 +873,7 @@
                 <!-- Logo / marque -->
                 <a href="#accueil" class="navbar__brand" aria-label="Vanélek - Retour à l'accueil">
                     <img src="logo.png" alt="Logo Vanélek" class="navbar__brand__logo"
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
                     <span class="navbar__brand__text">Vanélek<span>.</span></span>
                 </a>
 
@@ -848,13 +886,8 @@
                 </ul>
 
                 <!-- Bouton burger (mobile) -->
-                <button
-                    class="navbar__burger"
-                    id="burger"
-                    aria-label="Ouvrir le menu"
-                    aria-expanded="false"
-                    aria-controls="menu-nav"
-                >
+                <button class="navbar__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"
+                    aria-controls="menu-nav">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -871,12 +904,8 @@
             <div class="hero__content">
                 <!-- Logo du projet -->
                 <div class="hero__logo-wrapper">
-                    <img
-                        src="logo.png"
-                        alt="Logo Vanélek — Innovative Energy Solutions"
-                        class="hero__logo"
-                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                    >
+                    <img src="logo.png" alt="Logo Vanélek — Innovative Energy Solutions" class="hero__logo"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <!-- Affichage de secours si logo.png est absent (masqué par défaut) -->
                     <div class="hero__logo-fallback" style="display:none" aria-hidden="true">Vanélek</div>
                 </div>
@@ -886,7 +915,8 @@
                 <p class="hero__slogan">Innovative Energy Solutions</p>
                 <p class="hero__description">
                     Installez vous-même l'électricité de votre van en toute sécurité.
-                    Un kit modulaire sur-mesure, un accompagnement pas-à-pas, un projet pensé par des ingénieurs pour les vanlifers.
+                    Un kit modulaire sur-mesure, un accompagnement pas-à-pas, un projet pensé par des ingénieurs pour
+                    les vanlifers.
                 </p>
 
                 <!-- Appels à l'action -->
@@ -1030,7 +1060,8 @@
                     <!-- Membre 1 : Noé Périllat -->
                     <article class="carte-membre">
                         <span class="carte-membre__numero">01</span>
-                        <img class="carte-membre__avatar" src="photo/Noe.png" alt="Noé" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img class="carte-membre__avatar" src="photo/Noe.png" alt="Noé"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="carte-membre__avatar" aria-hidden="true" style="display:none;">NP</div>
                         <p class="carte-membre__prenom">Noé</p>
                         <h3 class="carte-membre__nom">Périllat</h3>
@@ -1040,7 +1071,8 @@
                     <!-- Membre 2 : Emre Tarakci -->
                     <article class="carte-membre">
                         <span class="carte-membre__numero">02</span>
-                        <img class="carte-membre__avatar" src="photo/Emre.png" alt="Emre" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img class="carte-membre__avatar" src="photo/Emre.png" alt="Emre"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="carte-membre__avatar" aria-hidden="true" style="display:none;">ET</div>
                         <p class="carte-membre__prenom">Emre</p>
                         <h3 class="carte-membre__nom">Tarakci</h3>
@@ -1050,7 +1082,8 @@
                     <!-- Membre 3 : Paul Rodo -->
                     <article class="carte-membre">
                         <span class="carte-membre__numero">03</span>
-                        <img class="carte-membre__avatar" src="photo/Paul.png" alt="Paul" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img class="carte-membre__avatar" src="photo/Paul.png" alt="Paul"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="carte-membre__avatar" aria-hidden="true" style="display:none;">PR</div>
                         <p class="carte-membre__prenom">Paul</p>
                         <h3 class="carte-membre__nom">Rodo</h3>
@@ -1060,7 +1093,8 @@
                     <!-- Membre 4 : Sami Rouabah -->
                     <article class="carte-membre">
                         <span class="carte-membre__numero">04</span>
-                        <img class="carte-membre__avatar" src="photo/Sami.png" alt="Sami" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img class="carte-membre__avatar" src="photo/Sami.png" alt="Sami"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="carte-membre__avatar" aria-hidden="true" style="display:none;">SR</div>
                         <p class="carte-membre__prenom">Sami</p>
                         <h3 class="carte-membre__nom">Rouabah</h3>
@@ -1070,7 +1104,8 @@
                     <!-- Membre 5 : Clément Mandelli -->
                     <article class="carte-membre">
                         <span class="carte-membre__numero">05</span>
-                        <img class="carte-membre__avatar" src="photo/Clement.png" alt="Clément" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img class="carte-membre__avatar" src="photo/Clement.png" alt="Clément"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="carte-membre__avatar" aria-hidden="true" style="display:none;">CM</div>
                         <p class="carte-membre__prenom">Clément</p>
                         <h3 class="carte-membre__nom">Mandelli</h3>
@@ -1194,4 +1229,5 @@
     </script>
 
 </body>
+
 </html>
